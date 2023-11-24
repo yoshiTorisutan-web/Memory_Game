@@ -4,10 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="memory.png" />
     <title>Memory Game</title>
   </head>
   <body>
-    <div id="game-board" class="board"></div>
+    <!-- Ajout de l'écran de début -->
+    <div id="start-screen" class="screen">
+      <h1>Memory Game</h1>
+      <button onclick="startGame()">Commencer</button>
+    </div>
+
+    <!-- Jeu -->
+    <div id="game-container">
+      <!-- Ajout du titre du jeu -->
+      <div id="game-title">Memory Game</div>
+
+      <!-- Ajout du timer -->
+      <div id="timer">Temps : <span id="timer-value">0</span> secondes</div>
+
+      <!-- Ajout de l'écran de victoire -->
+      <div id="victory-screen" class="screen">
+        <h1>Bravo !</h1>
+        <p>
+          Vous avez trouvé toutes les paires en
+          <span id="final-time"></span> secondes.
+        </p>
+        <button onclick="resetGame()">Rejouer</button>
+      </div>
+
+      <!-- Le tableau de jeu -->
+      <div id="game-board" class="board"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>
